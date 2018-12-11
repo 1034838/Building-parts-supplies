@@ -1,0 +1,659 @@
+#mycontainer {
+    width: 97.5%;
+}
+
+p {
+    font-family: 'Roboto', 'Work Sans', sans-serif !important;
+}
+
+p strong {
+    font-weight: bold;
+}
+
+/* Navbar styling, a hamburger menu for devices ranging from phones to tablets. More about the hamburger menu can be found in hamburger.js. On bigger screen sizes a normal navbar will be displayed. */
+header {
+    background-color: white;
+    padding: 1em 0;
+    position: relative;
+}
+
+header::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.site-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #3B3738;
+    height: 0;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.site-nav--open {
+    height: auto;
+}
+
+.site-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-nav li {
+    border-bottom: 1px solid #7E8F7C;
+}
+
+.active {
+    font-weight: 900;
+}
+
+.site-nav li:last-child {
+    border-bottom: none;
+}
+
+.site-nav a {
+    color: #F5F5F5;
+    display: block;
+    padding: 2em 6em;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'Work Sans', 'Roboto', sans-serif;
+    font-size: 0.95em;
+}
+
+.menu-toggle {
+    padding: 1em;
+    position: absolute;
+    top: 3.5em;
+    right: 0.5em;
+    cursor: pointer;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    display: block;
+    background: #404040;
+    height: 3px;
+    width: 1.75em;
+    border-radius: 3px;
+    transition: all ease-in-out 450ms;
+}
+
+.hamburger::before {
+    transform: translateY(-6px);
+}
+
+.hamburger::after {
+    transform: translateY(3px);
+}
+
+.open .hamburger {
+    transform: rotate(45deg);
+}
+
+.open .hamburger::before {
+    opacity: 0;
+}
+
+.open .hamburger::after {
+    transform: translateY(-3px) rotate(-90deg);
+}
+
+/* Stacked sidemenu for the overons page. */
+.stackedmenu ul {
+    list-style-type: none;
+    background: #F5F5F5;
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+}
+
+.stackedmenu li {
+    border-bottom: solid #7E8F7C 1px;
+    border-left: solid #7E8F7C 3px;
+    margin-bottom: 0;
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+.stackedmenu li:last-child {
+    border-bottom: none;
+}
+
+.stackedmenu a {
+    text-decoration: none;
+    color: #3B3738;
+}
+
+.stackedmenu span {
+    float: right;
+}
+
+.stackedactive {
+    border-left: solid #F08132 3px !important;
+}
+
+.stackedactive a {
+    color: #F08132;
+}
+
+/* Footer styling */
+.footer-distributed{
+    background-color: #ff5722;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font-family: 'Roboto', 'Work Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 55px 50px;
+    margin-top: 80px;
+    margin-left: 0px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer left */
+.footer-distributed .footer-left{
+    width: 40%;
+}
+
+/* The company logo */
+.footer-distributed h3{
+    color:  #ffffff;
+    border-bottom: solid #ffffff 1px;
+    font-family: 'Roboto', 'Work Sans', sans-serif;
+    font-size: 36px;
+    margin: 0;
+}
+
+/* Footer links */
+.footer-distributed .footer-links{
+    color:  #ffffff;
+    margin: 20px 0 12px;
+    padding: 0;
+}
+
+.footer-distributed .footer-links a{
+    display:inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+    color:  #ffffff;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Footer Center */
+.footer-distributed .footer-center{
+    width: 35%;
+}
+
+.footer-distributed .footer-center i{
+    background-color:  #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin:0;
+}
+
+.footer-distributed .footer-center p span{
+    display:block;
+    font-weight: normal;
+    font-size:14px;
+    line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+    color:  #ffffff;
+    text-decoration: none;;
+}
+
+
+/* Footer Right */
+.footer-distributed .footer-right{
+    width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+    line-height: 20px;
+    color:  #ffffff;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+    display: block;
+    color:  #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color:  #33383b;
+    border-radius: 2px;
+
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+/* General content styling for all pages. */
+.banner {
+    margin-bottom: 12px;
+    border-top: solid #F08132 4px;
+    border-bottom: solid #F08132 4px;
+    height: 100%;
+}
+
+.content h2 {
+    color: #F08132;
+    font-family: 'Roboto', 'Work Sans', sans-serif;
+    border-bottom: solid #FF9900 1px;
+}
+
+
+.content ul {
+    list-style-type: none;
+}
+
+.content li {
+    font-family: 'Roboto', 'Work Sans', sans-serif;
+    font-weight: 300;
+}
+
+.content p {
+    font-family: 'Roboto', 'Work Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+}
+
+.contentwrapper {
+    background-color: #F5F5F5;
+    border: solid #d5d5d5 1px;
+    margin: 2px 0;
+    padding: 32px;
+    font-family: 'Roboto', 'Work Sans', sans-serif;
+    font-size: 0.85em;
+}
+
+.contentwrapper h2,
+.contentwrapper h3 {
+    color: #F08132;
+    font-size: 1.5em;
+}
+
+
+.contentwrapper a {
+    list-style-type: none;
+    color: #F08132;
+}
+
+.firstP, .secondP, .thirdP {
+    width: 100%;
+}
+
+/* Content styling for the index page */
+.wallpapercontainer {
+    position: relative;
+}
+
+.wallpapertag {
+    position: absolute;
+    font-family: 'Roboto', 'Work Sans', sans-serif;
+    font-size: 1.25em;
+    color: #F5F5F5;
+    float: left;
+    background: rgba(240, 129, 50, 0.7);
+    height: 100%;
+    padding: 24px;
+    text-align: center;
+}
+
+.go_to_openhiring {
+    background-color: #F5F5F5;
+    color: #F08132;
+    padding: 8px;
+}
+
+.go_to_openhiring:hover {
+    text-decoration: none;
+    color: #3B3738;
+    -webkit-transition: color 1s ease-out;
+    -moz-transition: color 1s ease-out;
+    -o-transition: color 1s ease-out;
+    transition: color 1s ease-out;
+}
+
+.vacature h2 {
+    color: #F08132;
+    font-family: 'Roboto', 'Work Sans', sans-serif;
+    border-bottom: solid #FF9900 1px;
+}
+
+.vacature h3 {
+    font-weight: 600;
+}
+
+.vacature ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.vacature li {
+    font-family: 'Roboto', 'Work Sans', sans-serif;
+    padding: 15px;
+}
+
+
+.vacature p {
+    font-size: 15px;
+}
+
+.vacaturewrapper {
+    background-color: #F5F5F5;
+    border: solid #d5d5d5 1px;
+    margin: 2px 0;
+    padding: 4px;
+    font-family: 'Roboto', 'Work Sans', sans-serif;
+}
+
+.vacaturewrapper a {
+    list-style-type: none;
+    color: #3B3738;
+
+}
+
+.vacaturewrapper a:hover {
+    text-decoration: none;
+    color: #F08132;
+    border-radius: 2px;
+    -webkit-transition: color 0.5s ease-out;
+    -moz-transition: color 0.5s ease-out;
+    -o-transition: color 0.5s ease-out;
+    transition: color 0.5s ease-out;
+}
+
+.go_to_vacancy {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color:  #ff5722;
+    border-radius: 50%;
+
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+
+    margin: 0 auto;
+    float: right;
+}
+
+.go_to_vacancy:hover {
+    background-color: #F5F5F5;
+    color: #3B3738;
+    -webkit-transition: background-color 1.5s ease-out, color 1s ease-out;
+    -moz-transition: background-color 1.5s ease-out, color 1s ease-out;
+    -o-transition: background-color 1.5s ease-out, color 1s ease-out;
+    transition: background-color 1.5s ease-out, color 1s ease-out;
+}
+
+h3 .p-job-title {
+    color: #7E8F7C;
+    font-size: 0.8em;
+}
+
+/* Margin for the carousel. */
+.carouselmargin {
+    margin-top: 30px;
+    margin-bottom: 4.8px;
+}
+
+
+
+/* Footer on small screens */
+@media (max-width: 880px) {
+
+    .footer-distributed{
+        font: bold 14px sans-serif;
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right{
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .footer-distributed .footer-center i{
+        margin-left: 0;
+    }
+
+}
+
+
+
+/* Smallest phones */
+    @media only screen and (min-width : 320px) {
+
+    }
+
+
+
+/* Extra Small Devices, Phones */
+    @media only screen and (min-width : 480px) {
+        .articlewrapper {
+            background-color: #F5F5F5;
+            border: solid #d5d5d5 1px;
+            margin: 2px 10px;
+        }
+    }
+
+
+
+/* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+        .contentwrapper {
+            font-size: 1em;
+        }
+
+        .contentwrapper h2,
+        .contentwrapper h3 {
+            color: #F08132;
+            font-size: 1.8em;
+        }
+
+        .firstP, .secondP, .thirdP {
+            width: 33.3%;
+            float: left;
+        }
+
+        /* Content styling for the index page */
+        .wallpapertag {
+            padding: 0px 24px;
+            font-size: 1.2em;
+            max-width: 300px;
+        }
+    }
+
+
+
+/* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+        /* Navbar styling, this part is for the devices larger than tablets. A hamburger menu is displayed on smaller devices. */
+        header::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        .site-nav {
+            height: auto;
+            position: relative;
+            background: transparent;
+            float: right;
+        }
+
+        .site-nav li {
+            display: inline-block;
+            border: none;
+            margin-top: 40px;
+        }
+
+        .site-nav a {
+            color: #F08132;
+            padding: 0 8px;
+            margin-left: 1em;
+            font-family: 'Work Sans', 'Roboto', sans-serif;
+            font-size: 0.8em;
+        }
+        .site-nav a:hover {
+            color: #3B3738;
+            text-decoration: none;
+        }
+
+        .site-nav a::before {
+            content: '';
+            display: block;
+            height: 2px;
+            background-color: #F08132;
+
+            position: relative;
+            top: 22px;
+            width: 0;
+
+            transition: all ease-in-out 200ms;
+        }
+
+        .site-nav a:hover::before {
+            width: 100%;
+        }
+
+        /* The image on the vacatures page */
+        .placeholder {
+            position: absolute;
+            content: '';
+            margin-top: 2.5px;
+            z-index: -1;
+        }
+
+        .placeholder img {
+            height: 250px;
+        }
+
+        /* Stacked sidemenu for the overons page. */
+        .stackedmenu li {
+            padding: 20px 8px;
+        }
+
+        /* Content styling for the index page */
+        .wallpapertag {
+            padding: 44px 24px;
+        }
+    }
+
+
+
+/* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+        header::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+        .site-nav a {
+            color: #F08132;
+            padding: 0 12px;
+            margin-left: 12px;
+            font-family: 'Work Sans', 'Roboto', sans-serif;
+            font-size: 0.95em;
+        }
+
+        /* Stacked sidemenu for the "overons" page. */
+        .stackedmenu li {
+            border-bottom: solid #7E8F7C 1px;
+            border-left: solid #7E8F7C 3px;
+            margin-bottom: 0;
+            padding: 28px 8px;
+            font-size: 1em;
+        }
+
+        /* Footer styling */
+        .wrappertext {
+            display: inline-block;
+            float: right;
+            font-size: 0.75em;
+        }
+
+        /* The image on the vacatures page */
+
+        .placeholder img {
+            height: 300px;
+        }
+
+        /* Content styling for the index page */
+        .wallpapertag {
+            padding: 48px 24px;
+        }
+
+        .articlewrapper {
+            background-color: #F5F5F5;
+            border: solid #d5d5d5 1px;
+            margin: 2px 22px;
+        }
+    }

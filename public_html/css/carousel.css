@@ -1,0 +1,9 @@
+/* Styling for the carousel on the homepage */
+.jumbosel {
+  margin-top: 2.5px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.productlink a {
+  text-decoration: none;
+}
